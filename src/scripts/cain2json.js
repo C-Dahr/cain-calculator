@@ -4776,46 +4776,47 @@ var recipies = [];
 var entry = {};
 var materialKey = [
 	'Red Heart',
-  'Soul Heart',
-  'Black Heart',
-  'Eternal Heart',
-  'Gold Heart',
-  'Bone Heart',
-  'Rotten Heart',
-  'Penny',
-  'Nickel',
-  'Dime',
-  'Lucky Penny',
-  'Key',
-  'Golden Key',
-  'Charged Key',
-  'Bomb',
-  'Golden Bomb',
-  'Giga Bomb',
-  'Micro Battery',
-  "Lil' Battery",
-  'Mega Battery',
-  'Card',
-  'Pill',
-  'Rune/Soul Gem',
-  'Dice Shard',
-  'Cracked Key'];
+	'Soul Heart',
+	'Black Heart',
+	'Eternal Heart',
+	'Gold Heart',
+	'Bone Heart',
+	'Rotten Heart',
+	'Penny',
+	'Nickel',
+	'Dime',
+	'Lucky Penny',
+	'Key',
+	'Golden Key',
+	'Charged Key',
+	'Bomb',
+	'Golden Bomb',
+	'Giga Bomb',
+	'Micro Battery',
+	"Lil' Battery",
+	'Mega Battery',
+	'Card',
+	'Pill',
+	'Rune/Soul Gem',
+	'Dice Shard',
+	'Cracked Key'
+];
 
 for (var i = 0; i < arr.length; i++){
 	if(arr[i].includes('{{i|')){
-  	name = arr[i].split("|")[2].split("}")[0];
-    recipies = [
-    	arr[i+2].split("recipe")[1].split("}")[0].split("|").slice(1, 8),
-      arr[i+3].split("recipe")[1].split("}")[0].split("|").slice(1, 8),
-      arr[i+4].split("recipe")[1].split("}")[0].split("|").slice(1, 8),
-      arr[i+5].split("recipe")[1].split("}")[0].split("|").slice(1, 8)
-    ]
-    entry = {
-    	'item': name,
-      'recipies': recipies,
-    }
-    allItems.push(entry);
-  }
+		name = arr[i].split("|")[2].split("}")[0];
+		recipies = [
+			arr[i+2].split("recipe")[1].split("}")[0].split("|").slice(1, 9),
+			arr[i+3].split("recipe")[1].split("}")[0].split("|").slice(1, 9),
+			arr[i+4].split("recipe")[1].split("}")[0].split("|").slice(1, 9),
+			arr[i+5].split("recipe")[1].split("}")[0].split("|").slice(1, 9)
+		]
+		entry = {
+			'item': name,
+			'recipies': recipies,
+		};
+		allItems.push(entry);
+	}
 }
 
-console.log(allItems);
+console.log(JSON.stringify(allItems, null, 2));
