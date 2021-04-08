@@ -5,7 +5,7 @@
     </v-card-title>
     <v-card-text>
       Click on a material below to add it to the bag of crafting.
-      <v-row justify="center" align="center">
+      <v-row justify="center" align="center" class="mt-5">
         <v-col v-for="(item,index) in materialKey.slice(0,5)" v-bind:key="item.name" cols="2">
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
@@ -73,7 +73,7 @@
           </v-tooltip>
         </v-col>
       </v-row>
-      <v-row justify="center" align="center">
+      <v-row justify="center" align="center" class="mb-5">
         <v-col v-for="(item,index) in materialKey.slice(20,25)" v-bind:key="item.name" cols="2">
           <v-tooltip bottom>
             <template v-slot:activator="{ on, attrs }">
