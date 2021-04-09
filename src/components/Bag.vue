@@ -7,7 +7,7 @@
       <v-row justify="center" align="center" class="mb-5">
         <v-col cols=3>
           <v-img src="../assets/Bag_of_Crafting_icon.png" max-width="150"></v-img>
-          <v-btn class="mr-2">
+          <v-btn @click="craftBag()" class="mr-2">
             Craft
           </v-btn>
           <v-btn @click="resetBag()">
@@ -112,6 +112,9 @@ export default {
   methods: {
     resetBag (id) {
       this.$emit('reset')
+    },
+    craftBag () {
+      this.$emit('craft')
     }
   }
 }
