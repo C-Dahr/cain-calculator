@@ -20,9 +20,19 @@
           </v-card-title>
           <v-card-text>
             Here is a list of all the items you could craft with those materials.
-            <code>
-              {{this.craftables | pretty}}
-            </code>
+            <v-data-table
+              :headers="headers"
+              :items="craftables"
+              class="elevation-1"
+            >
+              <template v-slot:item.recipie="{ item }">
+                <v-row>
+                  <v-col v-for="(pickup, index) in item.recipie" v-bind:key="index">
+                    <v-img v-bind:src="require('../assets/pickups/' + materialKey[item.recipie[index]-1].icon)" max-width="50" class="mx-auto"></v-img>
+                  </v-col>
+                </v-row>
+              </template>
+            </v-data-table>
           </v-card-text>
         </v-card>
       </v-col>
@@ -30791,6 +30801,15 @@ export default {
         ]
       }
     ],
+    headers: [
+      {
+        text: 'Item',
+        align: 'start',
+        sortable: true,
+        value: 'item'
+      },
+      { text: 'Recipies', value: 'recipie' }
+    ],
     craftables: []
   }),
   filters: {
@@ -30814,6 +30833,7 @@ export default {
       this.bag = []
     },
     craft () {
+      this.craftables = []
       var recipies = []
       var tmpBag = [...this.bag]
       var tmpRec = []
