@@ -21,31 +21,31 @@
           <v-card-text>
             Here is a list of all the items you could craft with those materials.
             <v-data-table
-              class="elevation-1 pl-3"
+              class="elevation-1 pl-3 mt-5"
               style="background-color: #805a44"
               :headers="headers"
               :items="craftables"
               :items-per-page="7"
-              hide-default-footer
               @page-count="pageCount = $event"
               :page.sync="page"
               :search="search"
+              hide-default-footer
             >
               <template v-slot:top>
                 <v-text-field
                   v-model="search"
                   label="Search"
-                  class="mx-4 pt-5"
+                  class="mx-4 pt-6"
                 ></v-text-field>
               </template>
               <template v-slot:item.item="{ item }">
-                <v-btn text :href="'https://bindingofisaacrebirth.fandom.com/wiki/' + item.item.replaceAll(' ', '_')" target="__blank">
+                <v-btn text :href="'https://bindingofisaacrebirth.fandom.com/wiki/' + item.item.replaceAll(' ', '_')" target="__blank" min-height="60">
                   <v-img :src="item.image" max-width="50" class="mx-auto"></v-img>
                   {{ item.item }}
                 </v-btn>
               </template>
               <template v-slot:item.type="{ item }">
-                <div class="body-1">{{ item.type }}</div>
+                <div class="body-1">{{ item.type | capitalize }}</div>
               </template>
               <template v-slot:item.recipie="{ item }">
                 <v-row style="min-height: 120px" justify="center" align="center">
@@ -32201,7 +32201,7 @@ export default {
         value: 'item'
       },
       { text: 'Type', value: 'type' },
-      { text: 'Recipies', value: 'recipie' }
+      { text: 'Recipie', value: 'recipie' }
     ],
     craftables: [],
     page: 1,
@@ -32209,6 +32209,9 @@ export default {
     search: ''
   }),
   filters: {
+    capitalize: function (value) {
+      return value.charAt(0).toUpperCase() + value.slice(1)
+    }
   },
   computed: {
     bagContents: function () {
