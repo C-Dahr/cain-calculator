@@ -19,7 +19,7 @@
             Craftable Items
           </v-card-title>
           <v-card-text>
-            Here is a list of all the items you could craft with those materials.
+            Here is a list Of all the items you could craft with those materials.
             <v-data-table
               class="elevation-1 pl-3 mt-5"
               style="background-color: #805a44"
@@ -39,8 +39,8 @@
                 ></v-text-field>
               </template>
               <template v-slot:item.item="{ item }">
-                <v-btn text :href="'https://bindingofisaacrebirth.fandom.com/wiki/' + item.item.replaceAll(' ', '_')" target="__blank" min-height="60">
-                  <v-img :src="item.image" max-width="50" class="mx-auto"></v-img>
+                <v-btn text :href="'https://bindingofisaacrebirth.fandom.com/wiki/' + item.item.replaceAll(' ', '_').replaceAll('Options?','Options%3F')" target="__blank" min-height="60">
+                  <v-img v-bind:src="require('../assets/items/' + item.item.replaceAll(' ','_').replaceAll('!', '').replaceAll('<3', 'Less_Than_Three').replaceAll('/', '_').replaceAll('???', 'Blue_Baby').replaceAll('?','%3F') + '_icon.png')" min-width="50" class="mx-auto"></v-img>
                   {{ item.item }}
                 </v-btn>
               </template>
@@ -233,7 +233,7 @@ export default {
         ]
       },
       {
-        item: 'The Book of Belial',
+        item: 'The Book Of Belial',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/d/d7/Collectible_The_Book_of_Belial_icon.png',
         recipies: [
@@ -750,7 +750,7 @@ export default {
         ]
       },
       {
-        item: 'Shoop da Whoop!',
+        item: 'Shoop Da Whoop!',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/e/e7/Collectible_Doctor%27s_Remote_icon.png',
         recipies: [
@@ -844,7 +844,7 @@ export default {
         ]
       },
       {
-        item: 'Book of Shadows',
+        item: 'Book Of Shadows',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/d/de/Collectible_Book_of_Shadows_icon.png',
         recipies: [
@@ -1032,7 +1032,7 @@ export default {
         ]
       },
       {
-        item: 'Book of Revelations',
+        item: 'Book Of Revelations',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/6/67/Collectible_Book_of_Revelations_icon.png',
         recipies: [
@@ -1173,7 +1173,7 @@ export default {
         ]
       },
       {
-        item: 'Deck of Cards',
+        item: 'Deck Of Cards',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/b/b9/Collectible_Deck_of_Cards_icon.png',
         recipies: [
@@ -1314,7 +1314,7 @@ export default {
         ]
       },
       {
-        item: 'The Book of Sin',
+        item: 'The Book Of Sin',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/5/5a/Collectible_The_Book_of_Sin_icon.png',
         recipies: [
@@ -1361,7 +1361,7 @@ export default {
         ]
       },
       {
-        item: 'Mom\'s Bottle of Pills',
+        item: 'Mom\'s Bottle Of Pills',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/e/ee/Collectible_Mom%27s_Bottle_of_Pills_icon.png',
         recipies: [
@@ -2019,7 +2019,7 @@ export default {
         ]
       },
       {
-        item: 'Crack the Sky',
+        item: 'Crack The Sky',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/0/0e/Collectible_Crack_the_Sky_icon.png',
         recipies: [
@@ -2677,7 +2677,7 @@ export default {
         ]
       },
       {
-        item: 'Book of Secrets',
+        item: 'Book Of Secrets',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/3/36/Collectible_Book_of_Secrets_icon.png',
         recipies: [
@@ -2724,7 +2724,7 @@ export default {
         ]
       },
       {
-        item: 'Box of Spiders',
+        item: 'Box Of Spiders',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/8/83/Collectible_Box_of_Spiders_Rebirth_icon.png',
         recipies: [
@@ -3335,7 +3335,7 @@ export default {
         ]
       },
       {
-        item: 'Breath of Life',
+        item: 'Breath Of Life',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/d/dd/Collectible_Breath_of_Life_icon.png',
         recipies: [
@@ -3664,7 +3664,7 @@ export default {
         ]
       },
       {
-        item: 'Box of Friends',
+        item: 'Box Of Friends',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/b/bf/Collectible_Box_of_Friends_icon.png',
         recipies: [
@@ -4134,7 +4134,7 @@ export default {
         ]
       },
       {
-        item: 'Jar of Flies',
+        item: 'Jar Of Flies',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/0/0c/Collectible_Jar_of_Flies_Afterbirth_icon.png',
         recipies: [
@@ -4933,7 +4933,7 @@ export default {
         ]
       },
       {
-        item: 'D infinity',
+        item: 'D Infinity',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/f/f2/Collectible_Metronome_icon.png',
         recipies: [
@@ -5544,7 +5544,7 @@ export default {
         ]
       },
       {
-        item: 'Book of the Dead',
+        item: 'Book Of The Dead',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/4/47/Collectible_Book_of_the_Dead_icon.png',
         recipies: [
@@ -6578,7 +6578,7 @@ export default {
         ]
       },
       {
-        item: 'Urn of Souls',
+        item: 'Urn Of Souls',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/7/79/Collectible_Urn_of_Souls_icon.png',
         recipies: [
@@ -6813,7 +6813,7 @@ export default {
         ]
       },
       {
-        item: 'Jar of Wisps',
+        item: 'Jar Of Wisps',
         type: 'active',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/a/a7/Collectible_Jar_of_Wisps_icon.png',
         recipies: [
@@ -7753,7 +7753,7 @@ export default {
         ]
       },
       {
-        item: 'Blood of the Martyr',
+        item: 'Blood Of The Martyr',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/1/19/Collectible_Blood_of_the_Martyr_icon.png',
         recipies: [
@@ -7847,7 +7847,7 @@ export default {
         ]
       },
       {
-        item: 'Halo of Flies',
+        item: 'Halo Of Flies',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/a/aa/Collectible_Halo_of_Flies_Rebirth_icon.png',
         recipies: [
@@ -9304,7 +9304,7 @@ export default {
         ]
       },
       {
-        item: 'Charm of the Vampire',
+        item: 'Charm Of The Vampire',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/c/c3/Collectible_Charm_of_the_Vampire_icon.png',
         recipies: [
@@ -10009,7 +10009,7 @@ export default {
         ]
       },
       {
-        item: 'Lord of the Pit',
+        item: 'Lord Of The Pit',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/c/c1/Collectible_Lord_of_the_Pit_Rebirth_icon.png',
         recipies: [
@@ -10291,7 +10291,7 @@ export default {
         ]
       },
       {
-        item: 'Sack of Pennies',
+        item: 'Sack Of Pennies',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/f/f3/Collectible_Sack_of_Pennies_icon.png',
         recipies: [
@@ -11325,7 +11325,7 @@ export default {
         ]
       },
       {
-        item: 'Whore of Babylon',
+        item: 'Whore Of Babylon',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/f/ff/Collectible_Whore_of_Babylon_Rebirth_icon.png',
         recipies: [
@@ -11419,7 +11419,7 @@ export default {
         ]
       },
       {
-        item: 'Forever alone',
+        item: 'Forever Alone',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/1/19/Collectible_Bobby-Bomb_icon.png',
         recipies: [
@@ -11466,7 +11466,7 @@ export default {
         ]
       },
       {
-        item: 'Bucket of Lard',
+        item: 'Bucket Of Lard',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/5/5f/Collectible_Bucket_of_Lard_icon.png',
         recipies: [
@@ -12406,7 +12406,7 @@ export default {
         ]
       },
       {
-        item: 'Spirit of the Night',
+        item: 'Spirit Of The Night',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/4/4d/Collectible_Spirit_of_the_Night_Rebirth_icon.png',
         recipies: [
@@ -12594,7 +12594,7 @@ export default {
         ]
       },
       {
-        item: 'Cat-o-nine-tails',
+        item: 'Cat-O-Nine-Tails',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/b/b9/Collectible_Ghost_Baby_Rebirth_icon.png',
         recipies: [
@@ -15320,7 +15320,7 @@ export default {
         ]
       },
       {
-        item: 'Ball of Tar',
+        item: 'Ball Of Tar',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/3/3d/Collectible_Ball_of_Tar_icon.png',
         recipies: [
@@ -15649,7 +15649,7 @@ export default {
         ]
       },
       {
-        item: 'Contract from Below',
+        item: 'Contract From Below',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/d/de/Collectible_Experimental_Treatment_icon.png',
         recipies: [
@@ -20302,7 +20302,7 @@ export default {
         ]
       },
       {
-        item: 'Curse of the Tower',
+        item: 'Curse Of The Tower',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/f/ff/Collectible_Curse_of_the_Tower_icon.png',
         recipies: [
@@ -21477,7 +21477,7 @@ export default {
         ]
       },
       {
-        item: 'Spear of Destiny',
+        item: 'Spear Of Destiny',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/5/5e/Collectible_Spear_of_Destiny_Afterbirth_icon.png',
         recipies: [
@@ -22370,7 +22370,7 @@ export default {
         ]
       },
       {
-        item: 'Circle of Protection',
+        item: 'Circle Of Protection',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/9/93/Collectible_Circle_of_Protection_icon.png',
         recipies: [
@@ -23263,7 +23263,7 @@ export default {
         ]
       },
       {
-        item: 'Shard of Glass',
+        item: 'Shard Of Glass',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/1/13/Collectible_Shard_of_Glass_icon.png',
         recipies: [
@@ -23357,7 +23357,7 @@ export default {
         ]
       },
       {
-        item: 'Eye of Greed',
+        item: 'Eye Of Greed',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/2/26/Collectible_Eye_of_Greed_icon.png',
         recipies: [
@@ -23921,7 +23921,7 @@ export default {
         ]
       },
       {
-        item: 'Eye of Belial',
+        item: 'Eye Of Belial',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/1/1f/Collectible_Eye_of_Belial_icon.png',
         recipies: [
@@ -24015,7 +24015,7 @@ export default {
         ]
       },
       {
-        item: 'Glyph of Balance',
+        item: 'Glyph Of Balance',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/5/50/Collectible_Glyph_of_Balance_icon.png',
         recipies: [
@@ -24908,7 +24908,7 @@ export default {
         ]
       },
       {
-        item: 'Sack of Sacks',
+        item: 'Sack Of Sacks',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/1/1e/Collectible_Sack_of_Sacks_icon.png',
         recipies: [
@@ -27070,7 +27070,7 @@ export default {
         ]
       },
       {
-        item: 'A Bar of Soap',
+        item: 'A Bar Of Soap',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/c/c0/Collectible_A_Bar_of_Soap_icon.png',
         recipies: [
@@ -27446,7 +27446,7 @@ export default {
         ]
       },
       {
-        item: 'Eye of the Occult',
+        item: 'Eye Of The Occult',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/d/dc/Collectible_Eye_of_the_Occult_icon.png',
         recipies: [
@@ -27822,7 +27822,7 @@ export default {
         ]
       },
       {
-        item: 'Book of Virtues',
+        item: 'Book Of Virtues',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/5/5e/Collectible_Book_of_Virtues_icon.png',
         recipies: [
@@ -28527,7 +28527,7 @@ export default {
         ]
       },
       {
-        item: 'Act of Contrition',
+        item: 'Act Of Contrition',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/d/dc/Collectible_Act_of_Contrition_icon.png',
         recipies: [
@@ -29796,7 +29796,7 @@ export default {
         ]
       },
       {
-        item: 'Star of Bethlehem',
+        item: 'Star Of Bethlehem',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/0/07/Collectible_Star_of_Bethlehem_icon.png',
         recipies: [
@@ -30501,7 +30501,7 @@ export default {
         ]
       },
       {
-        item: 'A Pound of Flesh',
+        item: 'A Pound Of Flesh',
         type: 'passive',
         image: 'https://static.wikia.nocookie.net/bindingofisaacre_gamepedia/images/6/6c/Collectible_A_Pound_of_Flesh_icon.png',
         recipies: [
@@ -32204,7 +32204,7 @@ export default {
       { text: 'Recipie', value: 'recipie' }
     ],
     craftables: [],
-    page: 1,
+    page: 185,
     pageCount: 0,
     search: ''
   }),
@@ -32217,6 +32217,11 @@ export default {
     bagContents: function () {
       return this.bag
     }
+  },
+  mounted: function () {
+    this.$nextTick(function () {
+      this.craft()
+    })
   },
   methods: {
     addItem (id) {
@@ -32255,7 +32260,6 @@ export default {
             this.craftables.push({
               item: this.items[i].item,
               type: this.items[i].type,
-              image: this.items[i].image,
               recipie: [...recipies[j]]
             })
           }
