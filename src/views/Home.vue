@@ -39,7 +39,7 @@
                 ></v-text-field>
               </template>
               <template v-slot:item.item="{ item }">
-                <v-btn text :href="'https://bindingofisaacrebirth.fandom.com/wiki/' + item.item.replaceAll(' ', '_').replaceAll('Options?','Options%3F')" target="__blank" min-height="60">
+                <v-btn text :href="'https://bindingofisaacrebirth.fandom.com/wiki/' + item.item.replaceAll(' ', '_').replaceAll('?','%3F')" target="__blank" min-height="60">
                   <v-img v-bind:src="require('../assets/items/' + item.item.replaceAll(' ','_').replaceAll('!', '').replaceAll('<3', 'Less_Than_Three').replaceAll('/', '_').replaceAll('???', 'Blue_Baby').replaceAll('?','%3F') + '_icon.png')" min-width="50" class="mx-auto"></v-img>
                   {{ item.item }}
                 </v-btn>
